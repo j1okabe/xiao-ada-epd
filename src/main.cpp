@@ -66,16 +66,15 @@ void setup()
   display.init(115200, true, 2, false); // USE THIS for Waveshare boards with "clever" reset circuit, 2ms reset pulse
   // first update should be full refresh
   display.setRotation(3);
-  display.setTextColor(GxEPD_BLACK,GxEPD_WHITE);
+  display.setTextColor(GxEPD_BLACK, GxEPD_WHITE);
   display.setFullWindow();
   display.firstPage();
   do
   {
     display.fillScreen(GxEPD_WHITE);
-    printEfont("こんにちは", 0, 16*1);
-  }
-  while (display.nextPage());
-
+    printEfont("こんにちは", 0, 16 * 1);
+  } while (display.nextPage());
+  delay(1000);
   helloWorld(display);
   delay(1000);
   // partial refresh mode can be used to full screen,
